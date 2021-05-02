@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+appVersion: "1.0"
+description: An Open-Source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
+name: sshanmugam-clamav
+version: 1.0.0
+home: https://www.clamav.net
+maintainers:
+- name: saravanan shanmugam
+  email: saravanan.shanmugam@student.uml.edu

@@ -1,0 +1,19 @@
+# Default values for ClamAV.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+namespace: week14-clamav
+
+image:
+  repository: niilo/clamav-rest
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 3310
+
