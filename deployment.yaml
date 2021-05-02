@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sshanmugam-clamav-deployment
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: { { .Values.replicaCount } }
+  selector:
+    matchLabels:
+      app: sshanmugam-clamav
+  template:
+    metadata:
+      labels:
+        app: sshanmugam-clamav
+    spec:
+      containers:
+        - name: sshanmugam-clamav
+          image: "{{ .Values.image.repository }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: clamav-port
+              containerPort: 9000
+              protocol: TCP
